@@ -12,22 +12,25 @@ var cardsInPlay = [ ];
 var gameBoard = document.getElementById('game-board');
 var createBoard = function() {
     for ( var i = 0; i < cards.length; i++) {
-
-        var newCard = document.createElement('div');
-        newCard.className = 'card';
         newCard.setAttribute('data-card', cards[i]);
         newCard.addEventListener('click',  isTwoCards);
         gameBoard.appendChild(newCard);
     }
 }
 
+var isMatch = function() {
+
+}
 
 var isTwoCards = function() {
 	cardsInPlay.push(this.getAttribute('data-card'));
-	console.log(this.getAttribute('data-card'));
-	if (i = 0; i < .this(data-card))
+	if (cardsInPlay.lenth === 2) {
+		isMatch(cardsInPlay);
+		cardsinPlay = [];
+	}
 }
 
+createBoard ();
 
 
 
