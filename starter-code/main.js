@@ -1,42 +1,32 @@
 console.log("JS file is connected to HTML! Woo!")
 
-var cardOne = "queen";
-var cardTwo = "queen";
-var cardThree = "king";
-var cardFour = "king";
-
-/*
-if (cardOne === cardTwo) {
+var cards = ['queen', 'king', 'queen', 'king'];
+var cardsInPlay = [ ];
+	/* if (cardOne === cardTwo) {
 	alert('You found a match!');
 } else if (cardThree === cardFour) {
 	alert('You found a match!');
-}
-else {
-	alert('Try again!')
-}
-*/
+} else {
+	alert('Try again!');
+} */
+var gameBoard = document.getElementById('game-board');
+var createBoard = function() {
+    for ( var i = 0; i < cards.length; i++) {
 
-
-/* var createCards = function () {
-
-}
-*/
-
-
-	var gameBoard = document.getElementById('game-board');
-	var cards = 4;
-function createCards () {
-	for (var i = 0; i < cards; i++) {
-		var cardsDiv = document.createElement('div');
-		cardsDiv.className = 'card';
-		gameBoard.appendChild(cardsDiv)
-	}
+        var newCard = document.createElement('div');
+        newCard.className = 'card';
+        newCard.setAttribute('data-card', cards[i]);
+        newCard.addEventListener('click',  isTwoCards);
+        gameBoard.appendChild(newCard);
+    }
 }
 
-whichElem = document.getElementById('cards');
 
-createCards();
-
+var isTwoCards = function() {
+	cardsInPlay.push(this.getAttribute('data-card'));
+	console.log(this.getAttribute('data-card'));
+	if (i = 0; i < .this(data-card))
+}
 
 
 
