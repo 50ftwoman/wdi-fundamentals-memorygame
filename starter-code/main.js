@@ -38,6 +38,7 @@ var isTwoCards = function() {
 
 createBoard ();
 
+....
 
 
 
