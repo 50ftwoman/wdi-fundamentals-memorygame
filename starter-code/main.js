@@ -12,7 +12,13 @@ var cardsInPlay = [ ];
 var gameBoard = document.getElementById('game-board');
 var createBoard = function() {
     for ( var i = 0; i < cards.length; i++) {
-        newCard.setAttribute('data-card', cards[i]);
+        cardElement.setAttribute('data-card', cards[i]);
+        	if ('data-card' === 'king') {
+        		cardElement.innerHTML = '<img src="king.jpg" alt ="King of Hearts" />';
+        	}
+        	else if ('data-card' === 'queen') {
+        		cardElement.innerHTML = '<img src="queen.jpg" alt="Queen of Spades" />';
+        	}
         newCard.addEventListener('click',  isTwoCards);
         gameBoard.appendChild(newCard);
     }
